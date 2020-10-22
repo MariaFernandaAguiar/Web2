@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "arial";
+
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: url(nature2.jpg);
+	background-size: cover;
+
+}
+
+.calendario{
+	position: relative;
+	width: 180px;
+	background: white;
+	text-align: center;
+	border-radius: 9px;
+	overflow: hidden;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, transparent, bleck);
+}
+.calendario #mes{
+	position: relative;
+	padding: 5px 10px;
+	background: red;
+	color: white;
+	font-size: 30px;
+	font-weight: 700px;
+}
+.calendario #dia{
+	position: relative;
+	padding: 5px 10px;
+	background: white;
+	color: black;
+	opacity: 70%;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.calendario #diaNum{
+	margin-top: 0px;
+	line-height: 1em;
+	font-weight: 700;
+	font-size: 50px;
+	color: black;
+	
+}
+.calendario #ano{
+	line-height: 1em;
+	font-weight: 700;
+	font-size: 30px;
+	opacity: 70%;
+	color: black;
+}
+.calendario #horaTotal{
+	position: relative;
+	margin-bottom:  10px;
+	padding: 5px 10px;
+	background: white;
+	color: black;
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: capitalize;
+}

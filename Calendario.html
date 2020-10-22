@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calendário</title>
+	<link href = "estilo.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="calendario">
+		<p id=mes></p>
+		<p id=dia ></p>
+		<p id=diaNum ></p>
+		<p id=ano ></p>
+		<p id=horaTotal ></p>
+		
+	</div>
+	<script>
+		const lang = navigator.language;
+		let data = new Date();
+
+		let diaNum = data.getDate();
+		let dia = data.toLocaleString(lang,{weekday: 'long'});
+		let mes = data.toLocaleString(lang,{month: 'long'});
+		let ano = data.getFullYear();
+		function horario(){
+			let data = new Date();
+			let hora = data.getHours();
+			let min = data.getMinutes();
+			let seg = data.getSeconds();
+
+			let horaTotal = hora + ":" + min + ":" + seg;
+			document.getElementById('horaTotal').innerHTML = horaTotal; 
+		}
+		setInterval(horario,1000);
+
+		document.getElementById('mes').innerHTML = mes;
+		document.getElementById('dia').innerHTML = dia;
+		document.getElementById('diaNum').innerHTML = diaNum;
+		document.getElementById('ano').innerHTML = ano;
+
+
+	</script>
+</body>
+</html>
